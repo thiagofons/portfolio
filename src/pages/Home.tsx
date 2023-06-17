@@ -1,4 +1,5 @@
 import DownArrow from "../img/down-arrow.svg"
+import "../styles/main.sass"
 
 const Home = () => {
   return (
