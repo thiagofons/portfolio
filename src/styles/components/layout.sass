@@ -4,12 +4,46 @@
 .container
   background-color: variables.$grey
   font-family: variables.$font-family
-  display: grid
-  grid-template-columns: 8fr 2fr
+  display: flex
 
   .main, .aside
     min-height: 100vh
+  .main
+    grid-area: main
+  .aside
+    grid-area: aside
 
   @media screen and ( min-width: 425px )
-    grid-template-columns: 1fr
-    grid-template-rows: 8fr 2fr
+    grid-template-areas: "main aside"
+
+.navbar
+  display: flex
+  position: fixed
+  background-color: variables.$grey
+  min-height: 100vh
+
+  @media screen and ( min-width: 425px )
+    right: 0
+
+  .links
+    display: flex
+    justify-content: center
+    text-align: center
+    gap: 1rem
+    padding: 2rem
+
+    @media screen and ( min-width: 425px )
+      flex-direction: column
+      text-align: right
+       
+
+    .nav__link
+      text-decoration: none
+      color: variables.$off-white
+      font-weight: variables.$font-bold
+      font-size: 1.25rem
+
+      @media screen and ( min-width: 425px )
+        font-size: 3rem
+      &__active
+        color: variables.$flourescent-yellow
