@@ -1,4 +1,15 @@
 @use "../assets/_variables"
 @use "../assets/_mixins"
   
+.container
+  background-color: variables.$grey
+  font-family: variables.$font-family
+  display: grid
+  grid-template-columns: 8fr 2fr
 
+  .main, .aside
+    min-height: 100vh
+
+  @media screen and ( min-width: 425px )
+    grid-template-columns: 1fr
+    grid-template-rows: 8fr 2fr
