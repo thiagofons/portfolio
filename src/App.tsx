@@ -8,13 +8,13 @@ import Projects from "./pages/Projects";
 function App() {
   return (
     <Container className="App">
-      <main>
+      <main className="main">
         <Header />
         <AboutMe />
         <Projects />
         <Contact />
       </main>
-      <aside>
+      <aside className="aside">
         <NavBar />
       </aside>
     </Container>
