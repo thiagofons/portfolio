@@ -3,7 +3,7 @@ import "../styles/main.sass"
 
 const Home = () => {
   return (
-    <header className="home section">
+    <header id="home" className="home section">
       <div className="hello">
         <h1>
           Hi!
