@@ -1,5 +1,9 @@
 const AboutMe = () => {
-  return <></>
+  return (
+    <section id="aboutme">
+      
+    </section>
+  )
 }
 
 export default AboutMe;
