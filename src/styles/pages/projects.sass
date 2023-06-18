@@ -1,0 +1,42 @@
+@use "../assets/_variables"
+@use "../assets/_mixins"
+
+.projects
+  @include mixins.flex-column(1rem)
+
+  &__header
+    @include mixins.flex-column(.5rem)
+    align-items: center
+
+    p
+      text-align: center
+
+  &__carousel
+    padding: 1rem
+
+.project
+  width: 20rem
+  background-color: variables.$dark-grey
+  padding: 1rem
+  border-radius: .5rem
+  box-shadow: 0 0 1rem rgba(0,0,0,50%)
+  &__header
+    .project__name
+      h3
+        color: variables.$flourescent-yellow
+  &__body
+    .project__links
+      display: flex
+      justify-content: space-evenly
+
+      .project__link
+        a
+          @include mixins.flex-column(.25rem)
+          justify-content: center
+          align-items: center
+          text-decoration: none
+
+          padding: .5rem
+
+          img
+            max-width: 2rem
