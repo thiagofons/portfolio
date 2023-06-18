@@ -28,8 +28,11 @@ const AboutMe = () => {
           </p>
         </div>
         <div className="technologies">
-          <h3>Technologies</h3>
-          <p>Some technologies I've learned through this process</p>
+          <div className="tech__header">
+            <h3>Technologies</h3>
+            <p>Some technologies I've learned through this process</p>
+          </div>
+
           <div className="tech__container">
             <i className="devicon-html5-plain colored"></i>
             <i className="devicon-css3-plain colored"></i>
