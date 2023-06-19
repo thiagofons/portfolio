@@ -5,7 +5,7 @@ import "../styles/main.sass";
 const AboutMe = () => {
   return (
     <section id="aboutme" className="aboutme section">
-      <section>
+      <section className="aboutme__main">
         <header className="section__header">
           <h2>About Me</h2>
         </header>
@@ -39,7 +39,6 @@ const AboutMe = () => {
       <section className="technologies">
         <header>
           <h3>Technologies</h3>
-          <p>Some technologies I've learned through this process</p>
         </header>
         <main>
           <i className="devicon-html5-plain colored"></i>
