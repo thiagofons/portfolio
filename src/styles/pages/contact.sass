@@ -4,7 +4,8 @@
 .contact
   @include mixins.flex-column(1rem)
   text-align: center
-
+  justify-content: space-between
+  
   .social__icons
     display: flex
     justify-content: space-evenly
@@ -19,7 +20,9 @@
 
   .contact__me
     @include mixins.flex-column(1rem)
-    
+    background-color: variables.$dark-grey
+    padding: 1rem
+    border-radius: .5rem
     .insert
       display: flex
       flex-direction: column
@@ -28,6 +31,7 @@
         text-align: left
 
       input, textarea
+        background-color: variables.$off-white
         border-radius: .5rem
         border: none
         padding: .5rem
