@@ -2,20 +2,25 @@
 @use "../assets/_variables"
 @use "../assets/_mixins"
 .home
-  @include mixins.flex-column(0)
-  justify-content: space-evenly
+  min-height: 100vh
   color: variables.$off-white
-
+  @include mixins.flex-column(0)
+  justify-content: center
+  position: relative
   .hello
-
-    @include mixins.flex-column(1rem)
+    
+    
 
     h1, h2
       text-shadow: .2rem .2rem 1px variables.$dark-grey
     h1
       font-size: 3rem
+      @media screen and ( min-width: 425px )
+        font-size: 5rem
     h2
       font-size: 2rem
+      @media screen and ( min-width: 425px )
+        font-size: 3rem
 
     .role
       color: variables.$flourescent-yellow
@@ -24,5 +29,9 @@
     display: flex
     align-items: center
     justify-content: center
+    margin-top: 3rem
+    position: absolute
+    bottom: 1rem
+    left: calc(50% - 1.25rem)
     img
       width: 2.5rem
