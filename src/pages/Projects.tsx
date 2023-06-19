@@ -16,7 +16,7 @@ const Projects = () => {
       <header className="section__header">
         <h2>Projects</h2>
       </header>
-      <main className="projects__carousel">
+      <main className="projects__container">
         {projects &&
           projects.map((project, index) => (
             <Project

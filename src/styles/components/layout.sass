@@ -25,8 +25,11 @@
   .links
     width: 100%
     display: flex
-    justify-content: space-evenly
+    justify-content: space-between
     background-color: variables.$grey
+
+    @media screen and ( min-width: 425px )
+      justify-content: space-evenly
 
     .nav__link
       text-decoration: none
@@ -34,12 +37,11 @@
       font-weight: variables.$font-bold
       font-size: 1.25rem
 
-      @media screen and ( min-width: 425px )
-        font-size: 1.5rem
       &__active
         color: variables.$flourescent-yellow
 
 .main
+  overflow-x: hidden
   overflow-y: scroll
   display: flex
   flex-direction: column

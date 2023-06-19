@@ -2,17 +2,20 @@
 @use "../assets/_mixins"
 
 .aboutme
+
   main
     @include mixins.flex-column(1rem)
 
     @media screen and ( min-width: 425px )
       @include mixins.flex-row(1rem)
-      align-items: center
-      justify-content: center
+      padding: 1rem 0
 
     .profile__info
+      @include mixins.flex-column(1rem)
+      align-items: center
       img
         max-width: 20rem
+
       .info
         .college
           @include mixins.flex-row(1rem)
@@ -23,25 +26,28 @@
             width: 1.5rem
 
     .aboutme__info
-      @include mixins.flex-column(1rem)
       text-align: center
 
       @media screen and ( min-width: 425px )
         text-align: left
-      .technologies
-        header
+        display: block
+  .technologies
+    main
+      display: flex
+      flex-direction: row
+      overflow-x: scroll
+      gap: 2rem
+      padding: 1rem 0
 
-        main
-          margin-top: 1rem
-          display: grid
-          gap: 1rem
-          grid-template-columns: repeat(2, 1fr)
-          align-content: center
+      @media screen and ( min-width: 425px )
+        overflow: hidden
+        display: grid
+        grid-auto-columns: auto
+        grid-auto-rows: max-content
+        align-items: center
+        justify-items: center
 
-          @media screen and ( min-width: 425px )
-            @include mixins.flex-row(1rem)
-
-          i
-            font-size: 5rem
-            @media screen and ( min-width: 425px )
-              font-size: 10rem
+      i
+        font-size: 5rem
+        @media screen and ( min-width: 425px )
+          font-size: 10rem
