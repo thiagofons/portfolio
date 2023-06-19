@@ -1,16 +1,18 @@
+import "../styles/main.sass";
+import "aos/dist/aos.css";
+
 import MyImg from "../img/pictures/my-img.png";
 import UnivIcon from "../img/icons/university-icon.svg";
-import "../styles/main.sass";
 
 const AboutMe = () => {
   return (
     <section id="aboutme" className="aboutme section">
       <section className="aboutme__main">
         <header className="section__header">
-          <h2>About Me</h2>
+          <h2 data-aos="fade-down">About Me</h2>
         </header>
         <main>
-          <section className="profile__info">
+          <section className="profile__info" data-aos="fade-right">
             <img src={MyImg} alt="" />
             <div className="info">
               <div className="college">
@@ -19,7 +21,7 @@ const AboutMe = () => {
               </div>
             </div>
           </section>
-          <section className="aboutme__info">
+          <section className="aboutme__info" data-aos="fade-left">
             <section className="info__text">
               <p>
                 I had my first contact with the world of programming at
@@ -36,7 +38,7 @@ const AboutMe = () => {
         </main>
       </section>
 
-      <section className="technologies">
+      <section className="technologies" data-aos="fade-up">
         <header>
           <h3>Technologies</h3>
         </header>

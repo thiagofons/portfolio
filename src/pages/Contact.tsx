@@ -2,6 +2,7 @@ import { FormEvent, useState } from "react";
 import GitHubIcon from "../img/github-icon.svg";
 import LinkedInIcon from "../img/linkedin-icon.svg";
 import emailjs from "@emailjs/browser";
+import "aos/dist/aos.css";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -9,8 +10,6 @@ const Contact = () => {
     fromEmail: "",
     message: "",
   });
-  const [emailSended, setEmailSended]=  useState(false)
-
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -35,11 +34,11 @@ const Contact = () => {
 
   return (
     <section id="contact" className="section contact">
-      <header className="section__header">
+      <header className="section__header" data-aos="fade-up" >
         <h2>Contact</h2>
       </header>
       
-      <form className="contact__me" onSubmit={sendEmail}>
+      <form className="contact__me" onSubmit={sendEmail} data-aos="fade-up">
         <div className="insert insert__email">
           <label htmlFor="nameFrom">From</label>
           <input

@@ -1,6 +1,7 @@
 @use "../assets/_resets"
 @use "../assets/_variables"
 @use "../assets/_mixins"
+
 .home
   min-height: 100vh
   color: variables.$off-white
@@ -8,6 +9,8 @@
   justify-content: center
   position: relative
   .hello
+    @media screen and ( min-width: 425px )
+      padding: 5rem 
 
     h1, h2
       word-wrap: normal
@@ -32,5 +35,9 @@
     position: absolute
     bottom: 1rem
     left: calc(50% - 1.25rem)
+    
     img
       width: 2.5rem
+  .animate__animated.animate__bounce
+      animation-duration: 1.5s
+      animation-iteration-count: infinite
