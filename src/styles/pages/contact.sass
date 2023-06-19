@@ -15,7 +15,13 @@
     margin: auto 0
     
     .social__icon
-      max-width: 5rem
+      max-width: 3rem
+      @media screen and ( min-width: 425px )
+        max-width: 5rem
+      
+      transition: .5s
+      &:hover
+        transform: scale(1.1)
       a
         @include mixins.flex-column(.5rem)
         align-items: center
@@ -57,6 +63,9 @@
       padding: .5rem 
       color: variables.$grey
       font-weight: variables.$font-bold
-
+      &:hover
+        background-color: variables.$off-white
+        transition: .25s
+        cursor: pointer
       
 
