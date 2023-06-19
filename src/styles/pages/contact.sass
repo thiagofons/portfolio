@@ -1,0 +1,51 @@
+@use "../assets/_mixins"
+@use "../assets/_variables"
+
+.contact
+  @include mixins.flex-column(1rem)
+  text-align: center
+
+  .social__icons
+    display: flex
+    justify-content: space-evenly
+    margin: 3rem 0
+    
+    .social__icon
+      max-width: 5rem
+      a
+        @include mixins.flex-column(.5rem)
+        align-items: center
+        text-decoration: none
+
+  .contact__me
+    @include mixins.flex-column(1rem)
+    
+    .insert
+      display: flex
+      flex-direction: column
+      
+      label
+        text-align: left
+
+      input, textarea
+        border-radius: .5rem
+        border: none
+        padding: .5rem
+        color: variables.$grey
+        &:focus
+          outline: none
+      textarea
+        resize: none
+        
+        
+
+    .send__button
+      background-color: variables.$flourescent-yellow
+      border: none
+      border-radius: .5rem
+      padding: .5rem 
+      color: variables.$grey
+      font-weight: variables.$font-bold
+
+      
+
