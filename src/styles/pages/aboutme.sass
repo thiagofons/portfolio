@@ -2,53 +2,46 @@
 @use "../assets/_mixins"
 
 .aboutme
-  @include mixins.flex-column(1rem)
-
-  @media screen and ( min-width: 425px )
-    flex-direction: row
-
-  .info__header
-    @include mixins.flex-column(.5rem)
-    align-items: center
-    img
-      
-    .info
-      .college
-        display: flex
-        gap: .25rem
-        justify-content: center
-        align-items: center
-        img
-          width: 1rem
-
-  .info__body
-    
-    text-align: center
+  main
     @include mixins.flex-column(1rem)
 
-    .info__text
-      @include mixins.flex-column(1rem)  
+    @media screen and ( min-width: 425px )
+      @include mixins.flex-row(1rem)
+      align-items: center
+      justify-content: center
+
+    .profile__info
+      img
+        max-width: 20rem
+      .info
+        .college
+          @include mixins.flex-row(1rem)
+          justify-content: center
+          align-items: center
+
+          img
+            width: 1.5rem
+
+    .aboutme__info
+      @include mixins.flex-column(1rem)
+      text-align: center
+
       @media screen and ( min-width: 425px )
         text-align: left
+      .technologies
+        header
 
-    .technologies      
-      @media screen and ( min-width: 425px )
-        text-align: left
-  
-      .tech__container
-        padding: 1rem 0
-        display: flex
-        gap: 1rem
-        overflow-x: scroll
+        main
+          margin-top: 1rem
+          display: grid
+          gap: 1rem
+          grid-template-columns: repeat(2, 1fr)
+          align-content: center
 
-        @media screen and ( min-width: 425px )
-          flex-direction: row
-          justify-content: space-between
-          justify-items: center
-
-          overflow: hidden
-
-        i
-          font-size: 5rem
           @media screen and ( min-width: 425px )
-            font-size: 10rem
+            @include mixins.flex-row(1rem)
+
+          i
+            font-size: 5rem
+            @media screen and ( min-width: 425px )
+              font-size: 10rem

@@ -35,7 +35,10 @@ const Contact = () => {
 
   return (
     <section id="contact" className="section contact">
-      <h2>Contact</h2>
+      <header className="section__header">
+        <h2>Contact</h2>
+      </header>
+      
       <form className="contact__me" onSubmit={sendEmail}>
         <div className="insert insert__email">
           <label htmlFor="nameFrom">From</label>

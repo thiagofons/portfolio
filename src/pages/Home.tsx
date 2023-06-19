@@ -3,7 +3,7 @@ import "../styles/main.sass";
 
 const Home = () => {
   return (
-    <header id="home" className="home section">
+    <section id="home" className="home section">
       <div className="hello">
         <h1>
           Hi!
@@ -19,7 +19,7 @@ const Home = () => {
       <div className="down__arrow">
         <img src={DownArrow} alt="" />
       </div>
-    </header>
+    </section>
   );
 };
 
