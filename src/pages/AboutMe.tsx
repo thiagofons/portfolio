@@ -1,5 +1,5 @@
-import MyImg from "../img/my-img.png";
-import UnivIcon from "../img/university-icon.svg";
+import MyImg from "../img/pictures/my-img.png";
+import UnivIcon from "../img/icons/university-icon.svg";
 import "../styles/main.sass";
 
 const AboutMe = () => {
