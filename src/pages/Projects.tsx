@@ -13,11 +13,10 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects section">
-      <header className="projects__header">
+      <header className="section__header">
         <h2>Projects</h2>
-        <p>Here are some projects I developed to improve my front-end skills</p>
       </header>
-      <main className="projects__carousel">
+      <main className="projects__container">
         {projects &&
           projects.map((project, index) => (
             <Project

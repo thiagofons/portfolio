@@ -1,7 +1,7 @@
 import "../../styles/main.sass";
 
-import GitHubIcon from "../../img/icons/github-icon.svg"
-import LiveSiteIcon from "../../img/icons/play-icon.svg"
+import GitHubIcon from "../../img/icons/github-icon.svg";
+import LiveSiteIcon from "../../img/icons/play-icon.svg";
 
 type ProjectProps = {
   name: string;
@@ -20,24 +20,28 @@ const Project = (props: ProjectProps) => {
         </div>
       </header>
       <main className="project__body">
-        <section className="project__name">
-          <h3>{props.name}</h3>
-        </section>
-        <section className="project__description">
-          <p>{props.text}</p>
-        </section>
-        <section className="project__links">
-          <div className="project__link">
-            <a href={props.liveSiteLink}>
-              <img src={LiveSiteIcon} alt="" />
-            </a>
-          </div>
-          <div className="project__link">
-            <a href={props.githubLink}>
-              <img src={GitHubIcon} alt="" />
-            </a>
-          </div>
-        </section>
+        <header>
+          <section className="project__name">
+            <h3>{props.name}</h3>
+          </section>
+          <section className="project__description">
+            <p>{props.text}</p>
+          </section>
+        </header>
+        <main>
+          <section className="project__links">
+            <div className="project__link">
+              <a href={props.liveSiteLink}>
+                <img src={LiveSiteIcon} alt="" />
+              </a>
+            </div>
+            <div className="project__link">
+              <a href={props.githubLink}>
+                <img src={GitHubIcon} alt="" />
+              </a>
+            </div>
+          </section>
+        </main>
       </main>
     </div>
   );
