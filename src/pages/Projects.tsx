@@ -15,7 +15,6 @@ const Projects = () => {
     <section id="projects" className="projects section">
       <header className="projects__header">
         <h2>Projects</h2>
-        <p>Here are some projects I developed to improve my front-end skills</p>
       </header>
       <main className="projects__carousel">
         {projects &&

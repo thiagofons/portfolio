@@ -8,18 +8,13 @@ import Projects from "./pages/Projects";
 function App() {
   return (
     <Container className="App">
-      <aside className="aside">
-        <NavBar />
-      </aside>
+      <NavBar />
       <main className="main">
         <Home />
         <AboutMe />
         <Projects />
         <Contact />
       </main>
-      
-      
-      
     </Container>
   );
 }

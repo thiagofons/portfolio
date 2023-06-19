@@ -7,7 +7,6 @@ const NavBar = () => {
 
   return (
     <nav className="navbar">
-      <div className="dark__mode"></div>
       <div className="links">
         <NavLink text="Home" to="#home" active={page === "home"} />
         <NavLink text="About Me" to="#aboutme" active={page === "aboutme"} />

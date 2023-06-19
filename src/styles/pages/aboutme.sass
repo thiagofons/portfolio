@@ -5,14 +5,13 @@
   @include mixins.flex-column(1rem)
 
   @media screen and ( min-width: 425px )
-    display: grid
-    grid-template-columns: 2fr 8fr
+    flex-direction: row
 
   .info__header
     @include mixins.flex-column(.5rem)
     align-items: center
     img
-      width: 80%
+      
     .info
       .college
         display: flex
@@ -23,6 +22,7 @@
           width: 1rem
 
   .info__body
+    
     text-align: center
     @include mixins.flex-column(1rem)
 
@@ -31,13 +31,10 @@
       @media screen and ( min-width: 425px )
         text-align: left
 
-    .technologies
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-      
+    .technologies      
       @media screen and ( min-width: 425px )
         text-align: left
+  
       .tech__container
         padding: 1rem 0
         display: flex

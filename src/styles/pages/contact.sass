@@ -3,13 +3,15 @@
 
 .contact
   @include mixins.flex-column(1rem)
-  text-align: center
-  justify-content: space-between
+  h2
+    text-align: center
+
+  align-items: center
   
   .social__icons
     display: flex
     justify-content: space-evenly
-    margin: 3rem 0
+    margin: auto 0
     
     .social__icon
       max-width: 5rem
@@ -23,6 +25,10 @@
     background-color: variables.$dark-grey
     padding: 1rem
     border-radius: .5rem
+    
+
+    @media screen and ( min-width: 425px )
+      max-width: 40rem
     .insert
       display: flex
       flex-direction: column
@@ -40,7 +46,6 @@
           outline: none
       textarea
         resize: none
-        
         
 
     .send__button

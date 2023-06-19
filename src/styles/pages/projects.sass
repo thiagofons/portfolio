@@ -3,20 +3,19 @@
 
 .projects
   @include mixins.flex-column(1rem)
-
-  @media screen and ( min-width: 425px )
-    flex-direction: row
+    
   &__header
     @include mixins.flex-column(.5rem)
-    
-    
-    p
-      text-align: left
+    align-items: center
 
   &__carousel
     display: flex
     justify-content: center
     padding: 1rem
+    
+    @media screen and ( min-width: 425px )
+      justify-content: left
+    
 
 .project
   width: 20rem
