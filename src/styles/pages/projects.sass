@@ -7,24 +7,35 @@
   &__header
     @include mixins.flex-column(.5rem)
     align-items: center
-
     p
       text-align: center
 
   &__carousel
+    display: flex
+    justify-content: center
     padding: 1rem
 
 .project
   width: 20rem
   background-color: variables.$dark-grey
-  padding: 1rem
   border-radius: .5rem
   box-shadow: 0 0 1rem rgba(0,0,0,50%)
   &__header
+    border-top-left-radius: inherit
+    border-top-right-radius: inherit
+
+    .project__img
+      border-radius: inherit
+      overflow: hidden
+      display: block
+      max-width: 20rem
+      max-height: 20rem
+
+  &__body
+    padding: .5rem
     .project__name
       h3
         color: variables.$flourescent-yellow
-  &__body
     .project__links
       display: flex
       justify-content: space-evenly
@@ -40,3 +51,5 @@
 
           img
             max-width: 2rem
+
+    

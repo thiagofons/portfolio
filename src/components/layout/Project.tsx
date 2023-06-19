@@ -18,11 +18,11 @@ const Project = (props: ProjectProps) => {
         <div className="project__img">
           <img src={props.img} alt="" />
         </div>
-        <div className="project__name">
-          <h3>{props.name}</h3>
-        </div>
       </header>
       <main className="project__body">
+        <section className="project__name">
+          <h3>{props.name}</h3>
+        </section>
         <section className="project__description">
           <p>{props.text}</p>
         </section>
