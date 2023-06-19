@@ -2,6 +2,7 @@
 @use "../assets/_mixins"
 
 .aboutme
+  @include mixins.flex-column(2rem)
   main
     @include mixins.flex-column(2rem)
     justify-content: center
@@ -28,7 +29,7 @@
 
     .aboutme__info
       max-width: 30rem
-      
+      text-align: center
       @media screen and ( min-width: 425px )
         text-align: left
         display: block
@@ -36,6 +37,7 @@
         max-height: 20rem
         
   .technologies
+    
     header
       text-align: center
 
