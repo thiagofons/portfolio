@@ -1,0 +1,40 @@
+@use "../assets/_mixins"
+@use "../assets/_variables"
+
+.link__menu
+  position: fixed
+  min-height: 100vh
+  width: 50%
+  background-color: variables.$dark-mode
+  grid-template-rows: repeat(3, 1fr)
+  display: none
+
+  @media screen and (min-width: 600px)
+    position: static
+    min-height: auto
+    width: auto
+    padding: 0 4rem
+    align-items: center
+    @include mixins.flex-row($gap: 1rem)
+
+  header
+    h1
+      @include mixins.logo()
+
+      @media screen and (min-width: 600px)
+        display: none
+
+  main
+    @include mixins.flex-column($gap: 2rem)
+    justify-content: center
+
+    @media screen and (min-width: 600px)
+      @include mixins.flex-row($gap: 2rem)
+
+    .nav__link
+      text-decoration: none
+      color: variables.$solid-heading-dark-mode
+
+.show__menu
+  display: grid
+

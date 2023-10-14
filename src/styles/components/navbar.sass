@@ -1,0 +1,27 @@
+@use "../assets/_mixins"
+@use "../assets/_variables"
+
+.navbar
+  @include mixins.flex-row($gap: 12)
+  justify-content: space-between
+  background-color: variables.$dark-mode
+  padding-bottom: 1rem
+  
+
+  .nav__header
+    @include mixins.flex-row($gap: 1rem)
+    align-items: center
+
+    .menu__icon
+      font-size: 1.5rem
+
+    h1
+      @include mixins.logo()
+      
+  .nav__body
+    @include mixins.flex-row($gap: 1rem)
+  .social
+    @include mixins.flex-row($gap: 1rem)
+    img
+      width: 24px
+  

@@ -1,18 +1,20 @@
 @use "./assets/_resets"
-
 @use "./assets/_mixins"
 @use "./assets/_variables"
 
-@use "./components/layout"
+@use "./components/navbar"
+@use "./components/menu"
 
 @use "./pages/home"
 @use "./pages/aboutme"
-@use "./pages/projects"
-@use "./pages/contact"
 
-*
-  color: variables.$off-white
+* 
+  font-family: variables.$font-family
 
-*
-  color: variables.$off-white
+body
+  padding: 1rem
+  background-color: variables.$dark-mode
+  color: variables.$solid-heading-dark-mode
 
+  @media screen and (min-width: 600px)
+    padding: 2rem 2rem

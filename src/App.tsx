@@ -1,12 +1,14 @@
 import { useEffect } from "react";
 import Container from "./components/layout/Container";
 import NavBar from "./components/layout/NavBar";
-import AboutMe from "./pages/AboutMe";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
+import AboutMePage from "./pages/AboutMePage";
+import ContactPage from "./pages/ContactPage";
+import HomePage from "./pages/HomePage";
+import ProjectsPage from "./pages/ProjectsPage";
+import WorkExperiencePage from "./pages/WorkExperiencePage";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
   useEffect(() => {
@@ -18,15 +20,18 @@ function App() {
   }, []);
 
   return (
-    <Container className="App">
-      <NavBar />
-      <main className="main">
-        <Home />
-        <AboutMe />
-        <Projects />
-        <Contact />
-      </main>
-    </Container>
+    <ThemeProvider>
+      <Container className="App">
+        <NavBar />
+        <main className="main">
+          <HomePage />
+          <AboutMePage />
+          <WorkExperiencePage />
+          <ProjectsPage />
+          <ContactPage />
+        </main>
+      </Container>
+    </ThemeProvider>
   );
 }
 
