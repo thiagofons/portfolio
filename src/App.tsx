@@ -5,10 +5,12 @@ import AboutMePage from "./pages/AboutMePage";
 import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
-import WorkExperiencePage from "./pages/WorkExperiencePage";
+
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import "./styles/main.sass"
+import TechStackPage from "./pages/TechStackPage";
 
 function App() {
   useEffect(() => {
@@ -26,7 +28,7 @@ function App() {
         <main className="main">
           <HomePage />
           <AboutMePage />
-          <WorkExperiencePage />
+          <TechStackPage />
           <ProjectsPage />
           <ContactPage />
         </main>

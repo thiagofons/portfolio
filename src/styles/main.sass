@@ -7,7 +7,7 @@
 
 @use "./pages/home"
 @use "./pages/aboutme"
-
+@use "./pages/techstack"
 * 
   font-family: variables.$font-family
 
@@ -18,3 +18,21 @@ body
 
   @media screen and (min-width: 600px)
     padding: 2rem 2rem
+  @media screen and (min-width: 900px)
+    padding: 2rem 10rem
+
+  @media screen and (min-width: 1200px)
+    padding: 2rem 15rem
+.main
+  .section 
+    margin-bottom: 2.5rem
+    
+    h2
+      color: variables.$solid-heading-dark-mode
+      font-size: 2rem
+      text-align: center
+
+    h3
+      font-size: 1.5rem
+
+    

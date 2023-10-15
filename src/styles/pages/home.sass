@@ -14,11 +14,12 @@
     min-height: calc(100vh - 4rem)
 
   .text
-
+    padding: 2.5rem 0
     font-weight: variables.$font-bold
     p
       text-shadow: 2px 2px rgba(0,0,0,100%)
       font-size: 2.5rem
+      width: 100%
 
       @media screen and (min-width: 600px)
         font-size: 4rem
@@ -34,10 +35,12 @@
 
 
   .image
-    padding: 5rem 0
+    padding: 2.5rem 0
     align-self: center
     justify-self: center
 
+    @media screen and (min-width: 600px)
+      justify-self: right
     img
       max-width: 20rem
       border-radius: 50%

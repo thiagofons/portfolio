@@ -1,0 +1,49 @@
+@use "../assets/_mixins"
+@use "../assets/_variables"
+
+.experience
+  color: variables.$light-content
+  border-bottom: 2px solid variables.$light-content
+  @include mixins.flex-column($gap: .5rem)
+
+  header
+    @include mixins.flex-row($gap: 0)
+    justify-content: space-between
+
+    .name
+      font-size: 1rem
+    .type
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 0 1rem
+      border-radius: 1rem
+      font-size: .75rem
+      color: variables.$green
+      background-color: variables.$light-green
+
+    
+  main
+    @include mixins.flex-column($gap: 0)
+    .description
+      padding: .5rem 0
+      
+    .info
+      display: grid
+      padding: .5rem 0
+      grid-template-rows: 1fr
+      grid-template-columns: repeat(3, 1fr)
+
+      .item
+        @include mixins.flex-row($gap: .25rem)
+        align-items: center
+        img
+          width: 1rem
+        span
+          font-size: .75rem
+      .company
+        justify-self: left
+      .location
+        justify-self: center
+      .time
+        justify-self: right

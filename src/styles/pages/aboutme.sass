@@ -1,2 +1,32 @@
+@use "../assets/_mixins"
+@use "../assets/_variables"
+
 .aboutme
-  
+  section
+    padding: 1rem 0
+    .text
+      margin-bottom: 7.5rem
+
+    .info
+      .bullet__info
+        @include mixins.flex-row($gap: .5rem)
+        align-items: center
+        margin-bottom: .5rem
+        img
+          width: 2rem
+        span
+          font-size: 1rem
+          color: variables.$solid-heading-dark-mode
+
+  main
+    @include mixins.flex-column($gap: 0)
+
+    @media screen and (min-width: 600px)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: 1rem
+
+    .experiences
+      @media screen and (min-width: 600px)
+        @include mixins.flex-column($gap: 0)
+        justify-content: space-between
