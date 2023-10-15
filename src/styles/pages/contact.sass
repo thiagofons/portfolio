@@ -1,0 +1,21 @@
+@use "../assets/_variables"
+@use "../assets/_mixins"
+  
+.contact
+  @include mixins.flex-column($gap: 0)
+  min-height: 50vh
+
+  justify-content: center
+  align-items: center
+
+  .headline, .email
+    font-weight: variables.$font-bold
+    font-size: 1.25rem
+    @media screen and (min-width: 600px)
+      font-size: 2rem
+  .headline
+    color: variables.$solid-heading-dark-mode
+  .email
+    color: variables.$blue
+
+  

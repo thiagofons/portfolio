@@ -1,6 +1,6 @@
 import NavLink from "./NavLink";
 
-import "../../styles/main.sass";
+import "../../styles/components/menu.sass";
 
 const LinkMenu = () => {
   return (

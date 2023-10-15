@@ -20,11 +20,11 @@ const TechStackPage = () => {
         <p>Technologies I've been working with recently</p>
       </header>
       <main>
-        <header className="switch">
+        <div className="switch">
           <span>Web</span>
           <Switch value={mode} onChange={(e) => setMode(!mode)} />
           <span>Mobile</span>
-        </header>
+        </div>
         <main className="tech__container">
           <section className="web">
             <img className="icon" src={HtmlIcon} alt="" />

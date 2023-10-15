@@ -1,6 +1,6 @@
 import { AiOutlineMenu } from "react-icons/ai";
 
-import "../../styles/main.sass";
+import "../../styles/components/navbar.sass";
 import LinkMenu from "./LinkMenu";
 
 import GitHubLight from "../../assets/icons/github-light.svg";

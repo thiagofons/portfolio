@@ -11,6 +11,7 @@ import "aos/dist/aos.css";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import "./styles/main.sass"
 import TechStackPage from "./pages/TechStackPage";
+import Footer from "./components/layout/Footer";
 
 function App() {
   useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
           <ProjectsPage />
           <ContactPage />
         </main>
+        <Footer />
       </Container>
     </ThemeProvider>
   );

@@ -1,0 +1,38 @@
+@use "../assets/_variables"
+@use "../assets/_mixins"
+  
+.footer
+  .contact__data
+    padding: 2rem 0
+    border-bottom: 1px solid variables.$dark-grey
+
+    @include mixins.flex-row($gap: 0)
+    justify-content: space-between
+    align-items: center
+
+    header
+      h1
+        color: variables.$blue
+    main
+      @include mixins.flex-row($gap: 2rem)
+      align-items: center
+      .social
+        @include mixins.flex-row($gap: 1rem)
+        align-items: center
+
+        .social__icon
+          font-size: 1.5rem
+
+  .bottom
+    padding: 2rem 0
+    @include mixins.flex-row($gap: 0)
+    justify-content: space-between
+
+    .links
+      @include mixins.flex-row($gap: 2rem)
+      a 
+        text-decoration: none
+        color: variables.$light-content
+    .rights
+      font-size: .75rem
+      color: variables.$light-content

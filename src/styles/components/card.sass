@@ -1,0 +1,53 @@
+@use "../assets/_variables"
+@use "../assets/_mixins"
+
+.card
+  box-shadow: 2px 2px 1rem rgba(0, 0, 0, 25%)
+  width: 15rem
+  border-radius: .5rem
+  background-color: variables.$dark-grey
+  min-height: 20rem
+
+  .card__header
+    border-top-left-radius: inherit
+    border-top-right-radius: inherit
+    img
+      border-radius: inherit
+
+  .card__main
+
+    padding: .5rem 1rem
+    
+    header
+      h4
+        font-weight: variables.$font-medium
+        font-size: 1.25rem
+        color: variables.$solid-heading-dark-mode
+    main
+      .content
+        .card__description, .tech__list
+          font-weight: variables.$font-light
+          .bold
+            font-weight: variables.$font-regular
+
+      .links
+        @include mixins.flex-row($gap: 0)
+        justify-content: space-between
+      
+        .link
+          @include mixins.flex-row($gap: .25rem)
+          text-decoration: none
+          color: variables.$light-content
+          background-color: variables.$dark-grey
+          box-shadow: 0 0 .2rem rgba(0, 0, 0, 25%)
+          padding: .25rem
+          border-radius: .5rem
+
+          img
+            width: 1rem
+          span
+            font-size: .75rem
+
+.web
+
+.mobile

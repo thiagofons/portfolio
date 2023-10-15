@@ -1,0 +1,15 @@
+@use "../assets/_variables"
+@use "../assets/_mixins"
+  
+.projects
+  overflow: hidden
+  padding: 1rem
+
+  .projects__header
+    p
+      color: variables.$light-content
+      text-align: center
+      
+  .projects__main
+    @include mixins.flex-column($gap: 0)
+    
