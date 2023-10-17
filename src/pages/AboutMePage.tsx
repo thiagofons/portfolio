@@ -8,7 +8,7 @@ import EducationExperience from "../components/data/EducationExpericence";
 
 const AboutMePage = () => {
   return (
-    <section className="aboutme section">
+    <section id="aboutme" className="aboutme section">
       <header>
         <h2>About Me</h2>
       </header>

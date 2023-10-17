@@ -6,14 +6,18 @@ import LinkMenu from "./LinkMenu";
 import GitHubLight from "../../assets/icons/github-light.svg";
 import InstagramLight from "../../assets/icons/instagram-light.svg";
 import LinkedinLight from "../../assets/icons/linkedin-light.svg";
+import { useContext } from "react";
+import { PortfolioContext } from "../../contexts/PortfolioContext";
 
 const NavBar = () => {
+  const {openMenu, setOpenMenu} = useContext(PortfolioContext);
+  
   return (
-    <nav className="navbar">
+    <nav id="home" className="navbar">
       <section className="nav__header">
         <AiOutlineMenu
           className="menu__icon"
-          onClick={() => console.log("menu")}
+          onClick={() => setOpenMenu(!openMenu)}
           color=""
         />
         <h1>Thiago Arruda</h1>

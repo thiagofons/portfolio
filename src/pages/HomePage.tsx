@@ -4,7 +4,7 @@ import ProfilePic from "../assets/images/profile-pic.jpg";
 
 const HomePage = () => {
   return (
-    <section id="home" className="home section">
+    <section className="home section">
       <div className="text">
         <p>
           Hi 👋,<br></br>I am

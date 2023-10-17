@@ -4,11 +4,13 @@
 .experience
   color: variables.$light-content
   border-bottom: 2px solid variables.$light-content
+  margin-bottom: 1rem
   @include mixins.flex-column($gap: .5rem)
 
   header
     @include mixins.flex-row($gap: 0)
     justify-content: space-between
+    align-items: center
 
     .name
       font-size: 1rem
@@ -27,6 +29,8 @@
     @include mixins.flex-column($gap: 0)
     .description
       padding: .5rem 0
+      p
+        margin: 0
       
     .info
       display: grid

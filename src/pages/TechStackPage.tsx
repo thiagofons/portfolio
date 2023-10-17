@@ -14,31 +14,35 @@ const TechStackPage = () => {
   const [mode, setMode] = useState(true);
 
   return (
-    <section id="tech-stack" className="tech__stack section">
+    <section id="techstack" className="tech__stack section">
       <header>
         <h2>My Teck Stack</h2>
         <p>Technologies I've been working with recently</p>
       </header>
       <main>
-        <div className="switch">
-          <span>Web</span>
-          <Switch value={mode} onChange={(e) => setMode(!mode)} />
-          <span>Mobile</span>
-        </div>
         <main className="tech__container">
           <section className="web">
-            <img className="icon" src={HtmlIcon} alt="" />
-            <img className="icon" src={CssIcon} alt="" />
-            <img className="icon" src={SassIcon} alt="" />          
-            <img className="icon" src={JavascriptIcon} alt="" />          
-            <img className="icon" src={TypescriptIcon} alt="" />          
-            <img className="icon" src={ReactIcon} alt="" />                     
+            <header>
+              <span>Web</span>
+            </header>
+            <main>
+              <img className="icon" src={HtmlIcon} alt="" />
+              <img className="icon" src={CssIcon} alt="" />
+              <img className="icon" src={SassIcon} alt="" />
+              <img className="icon" src={JavascriptIcon} alt="" />
+              <img className="icon" src={TypescriptIcon} alt="" />
+              <img className="icon" src={ReactIcon} alt="" />
+            </main>
           </section>
           <section className="mobile">
-            <img className="icon" src={FlutterIcon} alt="" />            
+            <header>
+              <span>Mobile</span>
+            </header>
+            <main>
+              <img className="icon" src={FlutterIcon} alt="" />
+            </main>
           </section>
         </main>
-        
       </main>
     </section>
   );

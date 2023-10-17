@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Container from "./components/layout/Container";
 import NavBar from "./components/layout/NavBar";
 import AboutMePage from "./pages/AboutMePage";
@@ -6,27 +6,20 @@ import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { ThemeProvider } from "./contexts/ThemeContext";
+
+import { PortfolioContext, PortfolioProvider } from "./contexts/PortfolioContext";
 import "./styles/main.sass"
 import TechStackPage from "./pages/TechStackPage";
 import Footer from "./components/layout/Footer";
 
 function App() {
-  useEffect(() => {
-    Aos.init({
-      duration: 1000,
-      delay: 200,
-      once: true,
-    });
-  }, []);
+  const {openMenu} = useContext(PortfolioContext);
 
   return (
-    <ThemeProvider>
-      <Container className="App">
-        <NavBar />
-        <main className="main">
+    <PortfolioProvider>
+      <Container className="App">        
+        <main className={`main ${openMenu ? "blur" : ""}`}>
+          <NavBar />
           <HomePage />
           <AboutMePage />
           <TechStackPage />
@@ -35,7 +28,7 @@ function App() {
         </main>
         <Footer />
       </Container>
-    </ThemeProvider>
+    </PortfolioProvider>
   );
 }
 

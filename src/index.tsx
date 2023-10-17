@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { PortfolioProvider } from "./contexts/PortfolioContext";
 
 
 
@@ -11,7 +12,10 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App />
+    <PortfolioProvider>
+      <App />
+    </PortfolioProvider>
+    
   </React.StrictMode>
 );
 
