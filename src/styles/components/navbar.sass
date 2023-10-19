@@ -2,12 +2,11 @@
 @use "../assets/_variables"
 
 .navbar
-  @include mixins.flex-row($gap: 12)
+  @include mixins.flex-row($gap: 0)
   justify-content: space-between
   background-color: variables.$dark-mode
   padding-bottom: 1rem
   
-
   .nav__header
     @include mixins.flex-row($gap: 1rem)
     align-items: center
@@ -18,13 +17,12 @@
       @media screen and (min-width: 600px)
         display: none
 
-      
-
     h1
       @include mixins.logo()
       
   .nav__body
     @include mixins.flex-row($gap: 1rem)
+    align-items: center
   .social
     @include mixins.flex-row($gap: 1rem)
     

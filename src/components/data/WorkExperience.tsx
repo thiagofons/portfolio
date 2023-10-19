@@ -1,8 +1,10 @@
 import CompanyIcon from "../../assets/icons/company-light.svg";
 import LocationIcon from "../../assets/icons/carbon-location-light.svg";
 import CalendarIcon from "../../assets/icons/carbon-calendar-light.svg";
+import Chevron from "../../assets/icons/chevron-light.svg";
 
 import "../../styles/components/experience.sass";
+import { useState } from "react";
 
 type WorkExperienceProps = {
   role: string;
@@ -15,6 +17,8 @@ type WorkExperienceProps = {
 };
 
 const WorkExperience = (props: WorkExperienceProps) => {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="experience">
       <header>
@@ -23,8 +27,18 @@ const WorkExperience = (props: WorkExperienceProps) => {
       </header>
       <main>
         <section className="description">
-          <p>
-            {props.description}
+          <div className="opener" onClick={(e) => setOpen(!open)}>
+            <img
+              src={Chevron}
+              alt=""
+              className={`chevron ${open ? "clicked" : ""}`}
+              onClick={(e) => setOpen(!open)}
+            />
+            <span>Description</span>
+          </div>
+
+          <p className={`description__text ${open ? "open" : ""}`}>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae tempora quos voluptate eos minima culpa non eum exercitationem vero dolor repellendus error neque quas maiores similique, aspernatur impedit. Architecto, quam.
           </p>
         </section>
         <section className="info">

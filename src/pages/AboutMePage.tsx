@@ -50,7 +50,7 @@ const AboutMePage = () => {
                 location={"Brazil"}
                 start={"Jan 2023"}
                 end={"May 2023"}
-                description={""}
+                description={"sou gay e dou o cu"}
               />
             </div>
           </section>

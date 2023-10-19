@@ -1,6 +1,7 @@
 import CollegeIcon from "../../assets/icons/college-light.svg";
 import LocationIcon from "../../assets/icons/carbon-location-light.svg";
 import CalendarIcon from "../../assets/icons/carbon-calendar-light.svg";
+import Chevron from "../../assets/icons/chevron-light.svg";
 
 import "../../styles/components/experience.sass";
 import { useState } from "react";
@@ -16,7 +17,7 @@ type EducationExperienceProps = {
 };
 
 const EducationExperience = (props: EducationExperienceProps) => {
-  const [collapsed, setCollapsed] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="experience">
@@ -26,9 +27,21 @@ const EducationExperience = (props: EducationExperienceProps) => {
       </header>
       <main>
         <section className="description">
-          {/** TODO: colocar ícone clicável para expandir a descrição do curso */}
-          <span className="show__desc">Descrição</span>
-          <p>{props.description}</p>
+          <div className="opener" onClick={(e) => setOpen(!open)}>
+            <img
+              src={Chevron}
+              alt=""
+              className={`chevron ${open ? "clicked" : ""}`}
+            />
+            <span>Description</span>
+          </div>
+
+          <p className={`description__text ${open ? "open" : ""}`}>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
+            tempora quos voluptate eos minima culpa non eum exercitationem vero
+            dolor repellendus error neque quas maiores similique, aspernatur
+            impedit. Architecto, quam.
+          </p>
         </section>
         <section className="info">
           <div className="item company">

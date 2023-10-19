@@ -15,24 +15,14 @@
   display: none
   transition: .5s
   box-shadow: 1rem 0 .5rem rgba(0, 0, 0, 25%)
-  
-  &,
-  &::before,
-  &::after
-    animation: open ease .25s
 
-  @keyframes open
-    0%
-      left: -60%
-    100%
-      left: 0%
-      
   @media screen and (min-width: 600px)
     position: static
     min-height: auto
     width: auto
-    padding: 0 4rem
+    padding: 0 2rem
     align-items: center
+    box-shadow: none
     @include mixins.flex-row($gap: 1rem)
 
   header
@@ -53,17 +43,39 @@
   main
     @include mixins.flex-column($gap: 2rem)
     justify-content: center
+    
 
     @media screen and (min-width: 600px)
       @include mixins.flex-row($gap: 2rem)
 
     .nav__link
+      justify-self: center
       text-decoration: none
       color: variables.$solid-heading-dark-mode
+  footer
+    align-self: flex-end
+    @include mixins.flex-row($gap: .1rem)
+    .flag
+      width: 1.25rem
 
 .show__menu
-  display: grid
-  header
-    .close__icon
-      display: block
+  @media screen and (max-width: 600px)
+    display: grid
+    &,
+    &::before,
+    &::after
+      animation: open ease .25s
+
+    @keyframes open
+      0%
+        left: -60%
+      100%
+        left: 0%
+
+    header
+      .close__icon
+        display: block
+        
+        @media screen and (min-width: 600px)
+          display: none
 

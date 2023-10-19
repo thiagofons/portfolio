@@ -10,8 +10,8 @@ import { useContext } from "react";
 import { PortfolioContext } from "../../contexts/PortfolioContext";
 
 const NavBar = () => {
-  const {openMenu, setOpenMenu} = useContext(PortfolioContext);
-  
+  const { openMenu, setOpenMenu } = useContext(PortfolioContext);
+
   return (
     <nav id="home" className="navbar">
       <section className="nav__header">
@@ -26,9 +26,15 @@ const NavBar = () => {
         <LinkMenu />
         <section className="lang__sel"></section>
         <section className="social">
-          <img src={GitHubLight} alt="" />
-          <img src={InstagramLight} alt="" />
-          <img src={LinkedinLight} alt="" />
+          <a href="https://github.com/thiagofons" target="_blank" rel="noreferrer">
+            <img src={GitHubLight} alt="" />
+          </a>
+          <a href="https://www.instagram.com/thiagofons_/" target="_blank" rel="noreferrer">
+            <img src={InstagramLight} alt="" />
+          </a>
+          <a href="https://www.linkedin.com/in/thiagofons/" target="_blank" rel="noreferrer">
+            <img src={LinkedinLight} alt="" />
+          </a>
         </section>
       </section>
     </nav>
