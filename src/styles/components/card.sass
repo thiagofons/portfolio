@@ -3,50 +3,77 @@
 
 .card
   box-shadow: 2px 2px 1rem rgba(0, 0, 0, 25%)
-  width: 15rem
+  width: 20rem
   border-radius: .5rem
   background-color: variables.$dark-grey
-  min-height: 20rem
+  display: flex
+  flex-direction: column
 
   .card__header
     border-top-left-radius: inherit
     border-top-right-radius: inherit
+
     img
       border-radius: inherit
 
   .card__main
+    min-height: 20rem
+    padding: 1rem
+    display: grid
+    grid-template-rows: 1fr 9fr
 
-    padding: .5rem 1rem
-    
     header
       h4
         font-weight: variables.$font-medium
         font-size: 1.25rem
         color: variables.$solid-heading-dark-mode
     main
+      align-self: flex-start
+      display: flex
+      flex-direction: column
+      height: 100%
+      justify-content: space-between
+      
+
       .content
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+        height: 100%
         .card__description, .tech__list
           font-weight: variables.$font-light
+          
           .bold
             font-weight: variables.$font-regular
-
+        .tech__list
+          margin: 1rem 0
       .links
-        @include mixins.flex-row($gap: 0)
+        
+        @include mixins.flex-row($gap: 1rem)
         justify-content: space-between
-      
+
         .link
-          @include mixins.flex-row($gap: .25rem)
+          @include mixins.flex-row($gap: .5rem)
+          align-items: center
+          width: 100%
           text-decoration: none
           color: variables.$light-content
           background-color: variables.$dark-grey
           box-shadow: 0 0 .2rem rgba(0, 0, 0, 25%)
-          padding: .25rem
+          padding: .5rem
           border-radius: .5rem
+          transition: .25s
+          
+          &:hover
+            background-color: variables.$dark-mode
 
           img
             width: 1rem
           span
             font-size: .75rem
+
+
 
 .web
 

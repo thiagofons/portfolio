@@ -20,19 +20,23 @@ const ProjectsPage = () => {
             <WebAppCard
               image={MyNotesLogo}
               name={"MyNotes"}
-              description={"Write your notes"}
+              description={
+                "Write your thoughts on the browser using virtual sticky notes that will be saved locally on your machine. Feel free to add any information you want without being concerned about security."
+              }
               techStack={["React, SASS"]}
-              livePreviewLink={""}
-              codeLink={""}
+              livePreviewLink={"https://thiagofons.github.io/mynotes"}
+              codeLink={"https://github.com/thiagofons/mynotes"}
             />
           </main>
         </section>
+        {/**
         <section className="projects__mobile">
           <header>
             <h3>Mobile</h3>
           </header>
           <main className="projects__container"></main>
         </section>
+         */}
       </main>
     </section>
   );

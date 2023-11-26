@@ -4,7 +4,7 @@ import "../../styles/components/menu.sass";
 import { useContext } from "react";
 import { PortfolioContext } from "../../contexts/PortfolioContext";
 import { AiOutlineClose } from "react-icons/ai";
-import { Switch } from "@mui/material";
+import { Switch, colors } from "@mui/material";
 
 import BrazilFlag from "../../assets/icons/brazil-flag.svg";
 import UsaFlag from "../../assets/icons/usa-flag.svg";
@@ -30,10 +30,7 @@ const LinkMenu = () => {
       </main>
       <footer>
         <img src={BrazilFlag} className="flag" alt="" />
-        <Switch
-          defaultChecked={lang === "en" ? true : false}
-          onChange={(e) => e.target.checked ? setLang("en") : setLang("pt")}
-        />
+        <Switch defaultChecked={lang === "en" ? true : false} checked={true} />
         <img src={UsaFlag} className="flag" alt="" />
       </footer>
     </section>

@@ -17,7 +17,7 @@ type EducationExperienceProps = {
 };
 
 const EducationExperience = (props: EducationExperienceProps) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
     <div className="experience">
@@ -37,10 +37,7 @@ const EducationExperience = (props: EducationExperienceProps) => {
           </div>
 
           <p className={`description__text ${open ? "open" : ""}`}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
-            tempora quos voluptate eos minima culpa non eum exercitationem vero
-            dolor repellendus error neque quas maiores similique, aspernatur
-            impedit. Architecto, quam.
+            {props.description}
           </p>
         </section>
         <section className="info">

@@ -33,11 +33,11 @@ const WebAppCard = (props: WebAppCardProps) => {
             </p>
           </section>
           <section className="links">
-            <a className="link" href={props.livePreviewLink}>
+            <a className="link" href={props.livePreviewLink} target="_blank" rel="noreferrer">
               <img src={LivePreviewIcon} alt="" />
               <span>Live Preview</span>
             </a>
-            <a className="link" href={props.codeLink}>
+            <a className="link" href={props.codeLink} target="_blank" rel="noreferrer">
               <img src={GitHubIcon} alt="" />
               <span>View Code</span>
             </a>
