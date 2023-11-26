@@ -1,75 +1,15 @@
 @use "../assets/_variables"
 @use "../assets/_mixins"
-
+  
 .projects
-  @include mixins.flex-column(1rem)
-  min-height: fit-content
+  overflow: hidden
+  padding: 1rem
 
-  &__header
-    @include mixins.flex-column(.5rem)
-    align-items: center
-
-  &__container
-    display: flex
-    justify-content: center
-    padding: 1rem
-
-.project
-  width: 20rem
-  background-color: variables.$dark-grey
-  border-radius: .5rem
-  box-shadow: 0 0 1rem rgba(0,0,0,50%)
-  transition: .5s
-
-  &:hover
-    transform: scale(1.1)
-
-  @media screen and ( min-width: 425px )
-    width: fit-content
-    display: flex
-  &__header
-    border-top-left-radius: inherit
-    border-top-right-radius: inherit
-
-    @media screen and ( min-width: 425px )
-      border-top-right-radius: 0
-      border-bottom-left-radius: inherit
-
-    .project__img
-      border-radius: inherit
-      overflow: hidden
-      display: block
-      max-width: 20rem
-      max-height: 20rem
-
-  &__body
-    padding: 1rem
-
-    @media screen and ( min-width: 425px )
-
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-
-    .project__links
-      display: flex
-      justify-content: space-evenly
-
-      @media screen and ( min-width: 425px )
-
-        align-items: center
-
-      .project__link
-        a
-          @include mixins.flex-column(.25rem)
-          justify-content: center
-          align-items: center
-          text-decoration: none
-
-          padding: .5rem
-
-          img
-            max-width: 2rem
-            transition: .5s
-            &:hover
-              transform: scale(1.1)
+  .projects__header
+    p
+      color: variables.$light-content
+      text-align: center
+      
+  .projects__main
+    @include mixins.flex-column($gap: 2rem)
+    

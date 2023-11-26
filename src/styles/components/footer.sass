@@ -1,0 +1,56 @@
+@use "../assets/_variables"
+@use "../assets/_mixins"
+  
+.footer
+  .contact__data
+    padding: 1rem 0
+    border-bottom: 1px solid variables.$dark-grey
+
+    @include mixins.flex-column($gap: 1rem)    
+
+    @media screen and (min-width: 600px)
+      padding: 2rem 0
+      @include mixins.flex-row($gap: 0)
+      justify-content: space-between
+      align-items: center
+
+    header
+      h1
+        color: variables.$blue
+    main
+      @include mixins.flex-column($gap: .5rem)
+      
+
+      @media screen and (min-width: 600px)
+        @include mixins.flex-row($gap: 2rem)
+        align-items: center
+      .social
+        @include mixins.flex-row($gap: 1rem)
+        align-items: center
+
+        .social__icon
+          font-size: 1.5rem
+
+  .bottom
+    
+    @include mixins.flex-column($gap: 0rem)
+    justify-content: space-between
+    padding: 1rem 0
+
+    @media screen and (min-width: 600px)
+      
+      @include mixins.flex-row($gap: 0)
+
+    .links
+      @include mixins.flex-column($gap: 0rem)
+      a 
+        text-decoration: none
+        color: variables.$light-content
+      
+      @media screen and (min-width: 600px)
+        
+        @include mixins.flex-row($gap: 2rem)
+    .rights
+      font-size: .75rem
+      color: variables.$light-content
+      text-align: center

@@ -1,32 +1,34 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Container from "./components/layout/Container";
 import NavBar from "./components/layout/NavBar";
-import AboutMe from "./pages/AboutMe";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import AboutMePage from "./pages/AboutMePage";
+import ContactPage from "./pages/ContactPage";
+import HomePage from "./pages/HomePage";
+import ProjectsPage from "./pages/ProjectsPage";
+
+
+import { PortfolioContext, PortfolioProvider } from "./contexts/PortfolioContext";
+import "./styles/main.sass"
+import TechStackPage from "./pages/TechStackPage";
+import Footer from "./components/layout/Footer";
 
 function App() {
-  useEffect(() => {
-    Aos.init({
-      duration: 1000,
-      delay: 200,
-      once: true,
-    });
-  }, []);
+  const {openMenu} = useContext(PortfolioContext);
 
   return (
-    <Container className="App">
-      <NavBar />
-      <main className="main">
-        <Home />
-        <AboutMe />
-        <Projects />
-        <Contact />
-      </main>
-    </Container>
+    <PortfolioProvider>
+      <Container className="App">        
+        <main className={`main ${openMenu ? "blur" : ""}`}>
+          <NavBar />
+          <HomePage />
+          <AboutMePage />
+          <TechStackPage />
+          <ProjectsPage />
+          <ContactPage />
+        </main>
+        <Footer />
+      </Container>
+    </PortfolioProvider>
   );
 }
 

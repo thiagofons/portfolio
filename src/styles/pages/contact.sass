@@ -1,71 +1,21 @@
-@use "../assets/_mixins"
 @use "../assets/_variables"
-
-.contact
-  @include mixins.flex-column(1rem)
-  h2
-    text-align: center
-
-  align-items: center
+@use "../assets/_mixins"
   
-  .social__icons
-    width: 100%
-    display: flex
-    justify-content: space-evenly
-    margin: auto 0
-    
-    .social__icon
-      max-width: 3rem
-      @media screen and ( min-width: 425px )
-        max-width: 5rem
-      
-      transition: .5s
-      &:hover
-        transform: scale(1.1)
-      a
-        @include mixins.flex-column(.5rem)
-        align-items: center
-        text-decoration: none
+.contact
+  @include mixins.flex-column($gap: 0)
+  min-height: 50vh
 
-  .contact__me
-    @include mixins.flex-column(1rem)
-    background-color: variables.$dark-grey
-    padding: 1rem
-    border-radius: .5rem
-    width: 100%
-    
+  justify-content: center
+  align-items: center
 
-    @media screen and ( min-width: 425px )
-      max-width: 40rem
-    .insert
-      display: flex
-      flex-direction: column
-      
-      label
-        text-align: left
+  .headline, .email
+    font-weight: variables.$font-bold
+    font-size: 1.25rem
+    @media screen and (min-width: 600px)
+      font-size: 2rem
+  .headline
+    color: variables.$solid-heading-dark-mode
+  .email
+    color: variables.$blue
 
-      input, textarea
-        background-color: variables.$off-white
-        border-radius: .5rem
-        border: none
-        padding: .5rem
-        color: variables.$grey
-        &:focus
-          outline: none
-      textarea
-        resize: none
-        
-
-    .send__button
-      background-color: variables.$flourescent-yellow
-      border: none
-      border-radius: .5rem
-      padding: .5rem 
-      color: variables.$grey
-      font-weight: variables.$font-bold
-      &:hover
-        background-color: variables.$off-white
-        transition: .25s
-        cursor: pointer
-      
-
+  

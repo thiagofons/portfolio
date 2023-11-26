@@ -1,60 +1,32 @@
-@use "../assets/_variables"
 @use "../assets/_mixins"
+@use "../assets/_variables"
 
 .aboutme
-  @include mixins.flex-column(2rem)
+  section
+    .text
+      margin-bottom: 5rem
+      .important
+        @include mixins.logo()
+
+    .info
+      .bullet__info
+        @include mixins.flex-row($gap: .5rem)
+        align-items: center
+        margin-bottom: .5rem
+        img
+          width: 2rem
+        span
+          font-size: 1rem
+          color: variables.$solid-heading-dark-mode
+
   main
-    @include mixins.flex-column(2rem)
-    justify-content: center
-    align-items: center
-    
-    @media screen and ( min-width: 425px )
-      @include mixins.flex-row(2rem)
-      padding: 1rem 0
-      
-    .profile__info
-      @include mixins.flex-column(1rem)
-      align-items: center
-      img
-        max-width: 20rem
+    @include mixins.flex-column($gap: 2rem)
 
-      .info
-        .college
-          @include mixins.flex-row(1rem)
-          justify-content: center
-          align-items: center
+    @media screen and (min-width: 600px)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: 1rem
 
-          img
-            width: 1.5rem
-
-    .aboutme__info
-      max-width: 30rem
-      text-align: center
-      @media screen and ( min-width: 425px )
-        text-align: left
-        display: block
-        overflow-y: auto
-        max-height: 20rem
-        
-  .technologies
-    header
-      text-align: center
-
-    main
-      display: flex
-      flex-direction: row
-      flex-wrap: wrap
-      justify-content: center
-      gap: 2rem
-      padding: 1rem 0
-
-      i
-        font-size: 5rem
-        transition: .25s
-        &:hover
-          transform: scale(1.1)
-          
-
-        @media screen and ( min-width: 425px )
-          font-size: 7.5rem
-
+    .experiences
+      @media screen and (min-width: 600px)
+        @include mixins.flex-column($gap: 0)

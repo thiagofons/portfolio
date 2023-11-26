@@ -1,14 +1,17 @@
+import { useContext } from "react";
+import { PortfolioContext } from "../../contexts/PortfolioContext";
 import "../../styles/main.sass"
 
 type NavLinkProps = {
   text: string;
   to: string;
-  active: true | false;
 };
 
 const NavLink = (props: NavLinkProps) => {
+  const {openMenu, setOpenMenu} = useContext(PortfolioContext);
+  
   return (
-    <a className={`nav__link ${props.active ? "nav__link__active" : ""}`} href={props.to}>
+    <a className="nav__link" href={props.to} onClick={(e) => setOpenMenu(!openMenu)}>
       {props.text}
     </a>
   );
